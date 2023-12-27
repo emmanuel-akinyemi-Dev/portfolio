@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio page</title>
+    <!-- <link rel="stylesheet" href="./public/index.css"> -->
+    <link rel="stylesheet" href="./public/output.css">
+</head>
+<body class="bg-gray-950 p-3 w-screen h-screen">
+    <div class="flex-1 justify-center md:grid grid-cols-5 overflow-hidden md:my-24">
+        
+       <div class="flex justify-between items-center md:col-span-1 md:block">
+        <div class="banner cursor-pointer">MY PAGE</div>
+        
+        <nav class=" hidden absolute top-24 right-8 md:flex md:relative justify-center md:top-0" id="menuList">
+           <ul class="text-white text-2xl bg-gray-950 shadow-md p-6 shadow-yellow-500 md:shadow-none" >
+            <li class="li"><a href="./index.html">Home</a></li>
+            <li class="li"><a href="./src/about.html">About me</a></li>
+            <li class="li"><a href="./src/portfolio.html">Portfolio</a></li>
+            <li class="li"><a href="/src/message.html">Reach me</a></li>
+           </ul> 
+ </nav>
+  <svg id="menubar" class="w-10 mr-6 cursor-pointer text-yellow-500 transition hover:scale-125 duration-700  md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+       </div> 
+
+        <div class="md:col-span-4 text-white md:flex items-center">
+            <section class="w-4/5 ml-16 mb-10 "><img class="rounded-3xl shadow-lg shadow-yellow-600" src="./public/images/dp.jpg" alt="dp image"></section>
+            <section class="m-8"><h1 class="text-3xl text-yellow-500 font-bold">Hello there!</h1> <p class="text-lg"><strong class="text-2xl">W</strong>elcome to my website, i am emmanuel Akinyemi 
+                a software engineer from Nigeria,
+                if you would like to know more about me click on the more botton, or click the Portfolio 
+                button to see some of the projects i've done.</p>
+                 <section class="flex justify-center p-10"><button class="btn" >more</button>
+                    <button class="bg-transparent uppercase border border-e-8 border-yellow-600 rounded-xl p-2 hover:bg-yellow-600 transition duration-700 ml-5 hover:border-gray-800">Portfolio</button>
+                </section>
+        </div>   
+     </div>
+</body>
+<script type="module" src="./public/index.js"></script>
+</html>
