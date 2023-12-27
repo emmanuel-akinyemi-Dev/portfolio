@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio page</title>
+    <!-- <link rel="stylesheet" href="./public/index.css"> -->
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-950 p-3 w-screen h-screen overflow-x-hidden ">
+    <div class="flex-1 justify-center md:grid grid-cols-5 overflow-hidden md:my-24">
+        
+       <div class="flex justify-between items-center md:col-span-1 md:block">
+        <div class="banner cursor-pointer">MY PAGE</div>
+        
+        <nav class="hidden absolute top-24 right-8 md:flex md:relative justify-center md:top-0" id="menuList">
+           <ul class="text-white text-2xl bg-gray-950 shadow-md p-6 shadow-yellow-500 md:shadow-none" >
+            <li class="li"><a href="../index.html">Home</a></li>
+            <li class="li"><a href="./about.html">About me</a></li>
+            <li class="li"><a href="./portfolio.html">Portfolio</a></li>
+            <li class="li"><a href="./message.html">Reach me</a></li>
+           </ul> 
+ </nav>
+  <svg id="menubar" class="w-10 mr-6 cursor-pointer text-yellow-500 transition hover:scale-125 duration-700  md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+       </div> 
+
+        <div class="md:col-span-4 text-white md:flex items-center">
+           </div>   
+     </div>
+
+
+     <script type="module" src="./index.js"></script>
+
+</body>
+</html>
