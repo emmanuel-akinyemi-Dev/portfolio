@@ -19,8 +19,14 @@
 }
 
 .card{
-    @apply flex justify-between  my-5 mx-8
+    @apply flex justify-between items-center w-full 
 }
 .stack{
-    @apply bg-gray-900 w-4/5  shadow-lg shadow-yellow-600 rounded-lg overflow-hidden my-8 mx-5
+    @apply bg-gray-900 w-full h-3/5 shadow-lg shadow-yellow-600 rounded-lg overflow-hidden 
+}
+.txt{
+    @apply text-lg text-nowrap 
+}
+.contain{
+    @apply inline-block text-white w-4/5 ml-1/2
 }
