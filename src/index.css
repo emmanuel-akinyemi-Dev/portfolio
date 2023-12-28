@@ -45,12 +45,14 @@
     @apply w-10 mr-6 cursor-pointer text-yellow-500 transition hover:scale-125 duration-700
 }
 .info{
-  @apply text-sm cursor-pointer rounded-3xl w-72 text-nowrap bg-slate-800 flex justify-center p-3 ml-20 shadow-sm shadow-yellow-500
+  @apply text-sm cursor-pointer rounded-3xl w-72 text-nowrap bg-slate-800 flex justify-center p-3 ml-16 my-2 shadow-sm shadow-yellow-500
+   md:ml-32
 }
+
 .mains{
-    @apply flex justify-center items-center md:block md:mb-20
+    @apply block md:mb-20
 }
 
 .icon{
-  @apply w-16 h-16 md:w-full ml-12
+  @apply w-16 h-16 ml-8 md:w-full 
 }
