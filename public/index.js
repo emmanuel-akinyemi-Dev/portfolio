@@ -6,6 +6,8 @@ const portfolio = document.getElementById('port')
 const access = document.querySelector('#portimg')
 const temp = document.querySelector('#temp')
 const disp = document.querySelector('#disp')
+const cv =document.getElementById('cv');
+
 
 
 
@@ -33,4 +35,6 @@ portfolio?.addEventListener('click', ()=>{
 })
 
 
-
+cv?.addEventListener('click', ()=>{
+    location.href='../docs/Dev-Resume.pdf';
+})

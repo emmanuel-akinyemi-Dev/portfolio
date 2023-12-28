@@ -4,7 +4,7 @@
 
 
 .main-cont{
-    @apply flex-1 justify-center md:grid grid-cols-5 overflow-hidden md:my-20
+    @apply flex-1 justify-center md:grid grid-cols-5 overflow-hidden md:mt-14
 }
 
 .banner{
@@ -33,11 +33,24 @@
     @apply text-lg text-nowrap ml-5
 }
 .contain{
-    @apply flex-1 justify-center items-center  text-white w-4/5 m-auto md:col-span-4 md:grid grid-cols-3 gap-4
+    @apply flex-1 justify-center items-center  text-white w-4/5 m-auto mb-0 md:col-span-4 md:grid grid-cols-3 gap-4
 }
 .card-img{
-    @apply w-full h-52
+    @apply w-full h-40
 }
 .btn3{
     @apply btn2 m-3 text-nowrap
+}
+.icons{
+    @apply w-10 mr-6 cursor-pointer text-yellow-500 transition hover:scale-125 duration-700
+}
+.info{
+  @apply text-sm cursor-pointer rounded-3xl w-72 text-nowrap bg-slate-800 flex justify-center p-3 ml-20 shadow-sm shadow-yellow-500
+}
+.mains{
+    @apply flex justify-center items-center md:block md:mb-20
+}
+
+.icon{
+  @apply w-16 h-16 md:w-full ml-12
 }
