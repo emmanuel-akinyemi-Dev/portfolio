@@ -796,6 +796,7 @@ video {
 
 .li {
   margin-bottom: 0.5rem;
+  text-wrap: nowrap;
 }
 
 .li:hover {

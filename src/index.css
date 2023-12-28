@@ -12,7 +12,7 @@
 }
 
 .li{
-    @apply mb-2 hover:text-yellow-500  md:mt-10 md:ml-24
+    @apply mb-2 hover:text-yellow-500  md:mt-10 md:ml-24 text-nowrap
 }
 .btn2{
 @apply bg-transparent uppercase border border-e-8 border-yellow-600 rounded-xl p-2 hover:bg-yellow-600 transition duration-700 ml-5 hover:border-gray-800
