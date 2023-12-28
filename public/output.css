@@ -744,6 +744,21 @@ video {
   transition-duration: 700ms;
 }
 
+.main-cont {
+  flex: 1 1 0%;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .main-cont {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: grid;
+  }
+}
+
 .banner {
   margin: 2.5rem;
   display: flex;
