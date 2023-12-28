@@ -22,11 +22,17 @@
     @apply flex justify-between items-center w-full 
 }
 .stack{
-    @apply bg-gray-900 w-full h-3/5 shadow-lg shadow-yellow-600 rounded-lg overflow-hidden mb-5
+    @apply bg-gray-900 w-full shadow-lg shadow-yellow-600 rounded-lg overflow-hidden mb-5
 }
 .txt{
-    @apply text-lg text-nowrap 
+    @apply text-lg text-nowrap ml-5
 }
 .contain{
     @apply flex-1 justify-center items-center  text-white w-4/5 m-auto md:col-span-4 md:grid grid-cols-3 gap-4
+}
+.card-img{
+    @apply w-full h-52
+}
+.btn3{
+    @apply btn2 m-3
 }
