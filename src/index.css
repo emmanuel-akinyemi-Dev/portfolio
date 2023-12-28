@@ -22,11 +22,11 @@
     @apply flex justify-between items-center w-full 
 }
 .stack{
-    @apply bg-gray-900 w-full h-3/5 shadow-lg shadow-yellow-600 rounded-lg overflow-hidden 
+    @apply bg-gray-900 w-full h-3/5 shadow-lg shadow-yellow-600 rounded-lg overflow-hidden mb-5
 }
 .txt{
     @apply text-lg text-nowrap 
 }
 .contain{
-    @apply inline-block text-white w-4/5 ml-1/2
+    @apply flex-1 justify-center items-center  text-white w-4/5 m-auto md:col-span-4 md:grid grid-cols-3 gap-4
 }
