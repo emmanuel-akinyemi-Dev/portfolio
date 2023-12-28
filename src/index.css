@@ -39,5 +39,5 @@
     @apply w-full h-52
 }
 .btn3{
-    @apply btn2 m-3
+    @apply btn2 m-3 text-nowrap
 }
