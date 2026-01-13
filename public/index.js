@@ -36,5 +36,5 @@ portfolio?.addEventListener('click', ()=>{
 
 
 cv?.addEventListener('click', ()=>{
-    location.href='../docs/Dev-Resume.pdf';
+    location.href='../docs/DevResume.pdf';
 })

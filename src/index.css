@@ -2,59 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Layout */
 .main-cont {
-  @apply flex-1 justify-center md:grid grid-cols-5 overflow-hidden md:mt-14;
+  @apply min-h-screen md:grid md:grid-cols-5 md:mt-14 overflow-x-hidden;
 }
 
+/* Branding */
 .banner {
-  @apply rounded-3xl bg-yellow-600 w-40 p-5 items-center m-10  flex justify-center text-white font-bold text-2xl
-    md:ml-20 md:mb-0;
+  @apply rounded-3xl bg-yellow-600 w-40 p-5 m-6 flex items-center justify-center
+         text-white font-bold text-2xl cursor-pointer;
 }
+
+/* Buttons */
 .btn1 {
-  @apply text-white bg-yellow-600 rounded-xl w-28 uppercase p-2 border border-l-8 border-gray-900 
-    hover:bg-transparent hover:border-yellow-600 transition duration-700;
+  @apply text-white bg-yellow-600 rounded-xl w-28 uppercase p-2
+         border-l-8 border-gray-900
+         hover:bg-transparent hover:border-yellow-600
+         transition duration-300;
 }
 
-.li {
-  @apply mb-2 hover:text-yellow-500  md:mt-10 md:ml-24 text-nowrap;
-}
 .btn2 {
-  @apply bg-transparent uppercase border border-e-8 border-yellow-600 rounded-xl p-2 hover:bg-yellow-600 transition duration-700 ml-5 hover:border-gray-800;
+  @apply bg-transparent uppercase border-r-8 border-yellow-600 rounded-xl p-2
+         hover:bg-yellow-600 hover:border-gray-800
+         transition duration-300 ml-4;
 }
 
+.btn3 {
+  @apply btn2 mt-3 mb-3 whitespace-nowrap;
+}
+
+/* Navigation */
+.nav-item {
+  @apply mb-4 md:mt-10 md:ml-24 hover:text-yellow-500 whitespace-nowrap;
+}
+
+/* Cards / Sections */
 .card {
   @apply flex justify-between items-center w-full;
 }
+
 .stack {
-  @apply bg-gray-900 w-full shadow-lg shadow-yellow-600 rounded-lg overflow-hidden mb-5;
-}
-.txt {
-  @apply text-lg text-nowrap ml-5;
-}
-.contain {
-  @apply flex-1 justify-center items-center  text-white w-4/5 m-auto mb-0 md:col-span-4 md:grid grid-cols-3 gap-4;
-}
-.card-img {
-  @apply w-full h-40;
-}
-.btn3 {
-  @apply btn2 mr-3 ml-1 mt-3 mb-3 text-nowrap;
-}
-.icons {
-  @apply w-10 mr-6 cursor-pointer text-yellow-500 transition hover:scale-125 duration-700;
-}
-.info {
-  @apply text-sm cursor-pointer rounded-3xl w-72 text-nowrap bg-slate-800 flex justify-center p-3 ml-16 my-2 shadow-sm shadow-yellow-500
-   md:ml-32;
+  @apply bg-gray-900 w-full rounded-lg shadow-lg shadow-yellow-600 overflow-hidden mb-5;
 }
 
-.mains {
-  @apply block md:mb-20;
+.contain {
+  @apply md:col-span-4 grid md:grid-cols-3 gap-4
+         text-white w-4/5 mx-auto;
+}
+
+/* Text */
+.txt {
+  @apply text-lg ml-5 whitespace-nowrap;
+}
+
+/* Media */
+.card-img {
+  @apply w-full h-40 object-cover;
 }
 
 .icon {
-  @apply w-16 h-16 ml-8 md:w-full;
+  @apply w-16 h-16 md:w-full;
 }
+
+.icons {
+  @apply w-10 mr-6 cursor-pointer text-yellow-500
+         transition-transform duration-300 hover:scale-125;
+}
+
+/* Info bubble */
+.info {
+  @apply text-sm rounded-3xl w-72 bg-slate-800
+         flex justify-center p-3 my-2
+         shadow-sm shadow-yellow-500 cursor-pointer;
+}
+
+/* Sections */
 .section2 {
   @apply md:col-span-4 text-white;
 }

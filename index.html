@@ -1,46 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio page</title>
-    <!-- <link rel="stylesheet" href="./public/index.css"> -->
-    <link rel="stylesheet" href="./public/output.css">
-</head>
-<body class="bg-gray-950 p-3 w-screen h-screen">
-    <div class="main-cont">
-        
-       <div class="flex justify-between items-center md:col-span-1 md:block">
-        <div class="banner cursor-pointer">MY PAGE</div>
-        
-        <nav class="hidden absolute top-24 right-8 md:flex md:relative justify-center md:top-0" id="menuList">
-           <ul class="text-white text-2xl bg-gray-950 shadow-md p-6 shadow-yellow-500 md:shadow-none" >
-            <li class="li"><a href="./index.html">Home</a></li>
-            <li class="li"><a href="./public/about.html">About me</a></li>
-            <li class="li"><a href="./public/portfolio.html">Portfolio</a></li>
-            <li class="li"><a href="./public/service.html">Services</a></li>
-           </ul> 
- </nav>
-  <svg id="menubar" class="w-10 mr-6 cursor-pointer text-yellow-500 transition hover:scale-125 duration-700  md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-  </svg>
-       </div> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmanuel Akinyemi Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        <div class="md:col-span-4 text-white md:flex items-center">
-            <section class="w-4/5 ml-12 mb-10 "><img class="rounded-3xl shadow-lg shadow-yellow-600 " src="./public/images/DSC_flip.jpg" alt="dp image"></section>
-            <section class="m-8"><h1 class="text-3xl text-yellow-500 font-bold">Hello there!</h1> <p class="text-lg"><strong class="text-2xl">W</strong>elcome to my website, i am Emmanuel Akinyemi 
-                a software engineer from Nigeria,
-                if you would like to know more about me click on the more botton, or click the Portfolio 
-                button to see some of the projects i've done.</p>
-                 <section class="flex justify-center p-10" ><button id="morebtn" class="btn1" >more</button>
-                    <button class="btn2" id="port">Portfolio</button>
-                </section>
-        </div>   
-     </div>
+    <style>
+      .portfolio-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+      }
 
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
 
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-     
-     <script type="module" src="./public/index.js"></script>
-</body>
+      .social-icon:hover {
+        transform: scale(1.2);
+      }
+
+      .phone-card:hover {
+        transform: translateY(-10px);
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- HERO -->
+    <header class="bg-gray-900 text-white text-center py-24 px-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Emmanuel Akinyemi</h1>
+      <p class="text-xl md:text-2xl text-gray-300">
+        Web & Mobile Developer | Designer | Tech Enthusiast
+      </p>
+    </header>
+
+    <!-- ABOUT -->
+    <section
+      class="max-w-4xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center fade-in"
+    >
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img
+          src="/public/images/DSC_crop.jpg"
+          alt="Emmanuel Akinyemi"
+          class="rounded-full shadow-lg w-64 h-64 object-cover mx-auto"
+        />
+      </div>
+
+      <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          I am a passionate developer building elegant, responsive web and
+          mobile experiences. I enjoy crafting clean code and bringing ideas to
+          life.
+        </p>
+
+        <a
+          href="Emmanuel_Akinyemi_CV.pdf"
+          download
+          class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
+        >
+          Download CV
+        </a>
+      </div>
+    </section>
+
+    <!-- WEB PROJECTS -->
+    <section class="max-w-6xl mx-auto px-4 py-16 fade-in">
+      <h2 class="text-3xl font-bold mb-12 text-center">Recent Web Projects</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a
+          href="https://surrosantara.netlify.app/"
+          target="_blank"
+          class="portfolio-card rounded-lg overflow-hidden shadow-lg transition"
+        >
+          <img
+            src="/public/images/surro1.png"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 bg-gray-50">
+            <h3 class="font-bold text-xl">Surrosantara</h3>
+            <p class="text-sm text-gray-600">
+              Landing site for a tech platform
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://b2becommerceweb.netlify.app"
+          target="_blank"
+          class="portfolio-card rounded-lg overflow-hidden shadow-lg transition"
+        >
+          <img
+            src="/public/images/tradeHub.png"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 bg-gray-50">
+            <h3 class="font-bold text-xl">B2B E-commerce</h3>
+            <p class="text-sm text-gray-600">Wholesale commerce platform</p>
+          </div>
+        </a>
+
+        <a
+          href="https://prime-food-site.netlify.app/"
+          target="_blank"
+          class="portfolio-card rounded-lg overflow-hidden shadow-lg transition"
+        >
+          <img
+            src="/public/images/primeFoods.png"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 bg-gray-50">
+            <h3 class="font-bold text-xl">Prime Food</h3>
+            <p class="text-sm text-gray-600">Food ordering web app</p>
+          </div>
+        </a>
+
+        <a
+          href="https://prumusticketgenerator.netlify.app/"
+          target="_blank"
+          class="portfolio-card rounded-lg overflow-hidden shadow-lg transition"
+        >
+          <img
+            src="/public/images/tiketmaker.png"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 bg-gray-50">
+            <h3 class="font-bold text-xl">Ticket Generator</h3>
+            <p class="text-sm text-gray-600">Event ticket creation tool</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- MOBILE PROJECTS (PHONE MOCKUPS) -->
+    <section class="max-w-6xl mx-auto py-16 fade-in">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        Recent Mobile Projects
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4">
+        <!-- PHONE 1 -->
+        <div class="phone-card transition transform text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/surro App.png"
+              alt="Surro App"
+              class="absolute top-[5%] left-[29%] w-[42%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Surro Mobile App</p>
+        </div>
+        <div class="phone-card transition transform text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/surro App3.png"
+              alt="Surro App"
+              class="absolute top-[5%] left-[27%] w-[45%] h-5/6 object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Surro Mobile App</p>
+        </div>
+        <div class="phone-card transition transform mx-auto text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/surro App2.png"
+              alt="Surro App"
+              class="absolute top-[6%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Surro Mobile App</p>
+        </div>
+        <!-- PHONE 2 -->
+        <div class="phone-card transition transform mx-auto text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/surro App1.png"
+              alt="Surro App"
+              class="absolute top-[6%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Delve App</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- project 2 -->
+    <section class="max-w-6xl mx-auto py-16 fade-in">
+      <div class="grid grid-cols-1 md:grid-cols-4">
+        <!-- PHONE 1 -->
+        <div class="phone-card transition transform text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/delve App.png"
+              alt="Delve App"
+              class="absolute top-[6%] left-[26%] w-[45%] h-5/6 object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Delve App</p>
+        </div>
+        <div class="phone-card transition transform text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/delve App 2.png"
+              alt="Delve App"
+              class="absolute top-[5%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Delve App</p>
+        </div>
+        <div class="phone-card transition transform mx-auto text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/delve App 3.jpg"
+              alt="Delve App"
+              class="absolute top-[6%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Delve App</p>
+        </div>
+        <!-- PHONE 2 -->
+        <div class="phone-card transition transform mx-auto text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/surro App1.png"
+              alt="Delve App"
+              class="absolute top-[6%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Delve App</p>
+        </div>
+      </div>
+    </section>
+
+        <!-- project 3 -->
+    <section class="max-w-6xl mx-auto py-16 fade-in">
+      <div class="grid grid-cols-1 md:grid-cols-4">
+        <!-- PHONE 1 -->
+        <div class="phone-card transition transform text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/parrotica.png"
+              alt="Parotica app"
+              class="absolute top-[5.3%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Parotica app</p>
+        </div>
+        <div class="phone-card transition transform text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/parrotica (1).png"
+              alt="Parotica app"
+              class="absolute top-[5%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Parrotica app</p>
+        </div>
+        <div class="phone-card transition transform mx-auto text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/parrotica (3).png"
+              alt="Parotica app"
+              class="absolute top-[6%] left-[29%] w-[41%] object-contain rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Parrotica app</p>
+        </div>
+        <!-- PHONE 2 -->
+        <div class="phone-card transition transform mx-auto text-center">
+          <div class="relative">
+            <img
+              src="/public/images/mobileFrame.png"
+              alt="Phone Frame"
+              class="w-full"
+            />
+            <img
+              src="/public/images/parrotica (4).png"
+              alt="Parotica app"
+              class="absolute top-[6%] left-[29%] w-[41%] h-5/6 object-fill  rounded-lg"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Parrotica app</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / SOCIALS -->
+    <section class="max-w-4xl mx-auto px-4 py-16 fade-in">
+      <h2 class="text-3xl font-bold mb-6 text-center">Connect with Me</h2>
+
+      <div class="flex justify-center flex-wrap gap-6">
+        <a href="https://github.com/emmanuel-akinyemi-Dev" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+            class="w-10 h-10 social-icon transition"
+          />
+        </a>
+        <a href="https://t.me/prumusprime" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+            class="w-10 h-10 social-icon transition"
+          />
+        </a>
+        <a href="https://linkedin.com/in/emmanuelakinyemidev" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            class="w-10 h-10 social-icon transition"
+          />
+        </a>
+        <a href="https://twitter.com/emmanueldev" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+            class="w-10 h-10 social-icon transition"
+          />
+        </a>
+        <a href="https://instagram.com/emmanueldev" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+            class="w-10 h-10 social-icon transition"
+          />
+        </a>
+        <a href="https://facebook.com/emmanueldev" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            class="w-10 h-10 social-icon transition"
+          />
+        </a>
+      </div>
+
+      <p class="text-center text-gray-500 mt-8">
+        © 2026 Emmanuel Akinyemi. All rights reserved.
+      </p>
+    </section>
+  </body>
 </html>
