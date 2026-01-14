@@ -45,34 +45,76 @@
     </header>
 
     <!-- ABOUT -->
-    <section
-      class="max-w-4xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center fade-in"
+<section
+  class="max-w-4xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center fade-in"
+>
+  <div class="md:w-1/2 mb-8 md:mb-0">
+    <img
+      src="/public/images/DSC_crop.jpg"
+      alt="Emmanuel Akinyemi"
+      class="rounded-full shadow-lg w-64 h-64 object-cover mx-auto"
+    />
+  </div>
+
+  <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      I am a passionate developer building elegant, responsive web and
+      mobile experiences. I enjoy crafting clean code and bringing ideas to
+      life.
+    </p>
+
+    <!-- Download Button -->
+    <button
+      id="downloadBtn"
+      class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
     >
-      <div class="md:w-1/2 mb-8 md:mb-0">
-        <img
-          src="/public/images/DSC_crop.jpg"
-          alt="Emmanuel Akinyemi"
-          class="rounded-full shadow-lg w-64 h-64 object-cover mx-auto"
-        />
-      </div>
+      Download CV
+    </button>
+  </div>
 
-      <div class="md:w-1/2 md:pl-12 text-center md:text-left">
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-gray-700 mb-4 leading-relaxed">
-          I am a passionate developer building elegant, responsive web and
-          mobile experiences. I enjoy crafting clean code and bringing ideas to
-          life.
-        </p>
+  <!-- Popup Modal -->
+  <div
+    id="cvPopup"
+    class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50"
+  >
+    <div class="bg-white text-gray-900 px-8 py-6 rounded-lg shadow-xl text-center max-w-sm">
+      <p class="text-lg font-semibold mb-2">
+        Your CV will start downloading in a few seconds.
+      </p>
+      <p class="text-sm text-gray-600">Please wait…</p>
+    </div>
+  </div>
 
-        <a
-          href="Emmanuel_Akinyemi_CV.pdf"
-          download
-          class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
-        >
-          Download CV
-        </a>
-      </div>
-    </section>
+  <!-- Script -->
+  <script>
+    const downloadBtn = document.getElementById("downloadBtn");
+    const popup = document.getElementById("cvPopup");
+
+    downloadBtn.addEventListener("click", () => {
+      // Show popup
+      popup.classList.remove("hidden");
+      popup.classList.add("flex");
+
+      // Start download after short delay
+      setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = "Emmanuel_Akinyemi_CV.pdf";
+        link.download = "Emmanuel_Akinyemi_CV.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 1500);
+
+      // Hide popup after download starts
+      setTimeout(() => {
+        popup.classList.add("hidden");
+        popup.classList.remove("flex");
+      }, 3500);
+    });
+  </script>
+</section>
+
 
     <!-- WEB PROJECTS -->
     <section class="max-w-6xl mx-auto px-4 py-16 fade-in">
